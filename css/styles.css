@@ -972,6 +972,10 @@ img {
   background-repeat: no-repeat;
 }
 
+.confirm-check:focus + .confirm-text span {
+  border-color: var(--accent-color);
+}
+
 .license-agreement {
   font-weight: 400;
   font-size: 14px;
