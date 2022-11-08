@@ -911,15 +911,9 @@ img {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.confirm-wrap {
-  margin-bottom: 30px;
-  display: flex;
-  align-items: center;
-}
-
 /* Згода */
 
-.confirm-checkbox {
+.confirm-check {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -933,34 +927,49 @@ img {
   overflow: hidden;
 }
 
-.confirm-new-icon {
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-
-  border: 2px solid var(--title-text-color);
-  border-radius: 4px;
-
-  margin-right: 8px;
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.confirm-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
-.confirm-checkbox:checked + .confirm-new-icon {
-  background-color: var(--accent-color);
-  background-image: url(../images/icon-check.svg);
-  border-color: transparent;
-  background-size: contain;
-  background-origin: border-box;
-  background-repeat: no-repeat;
+.confirm-new-text {
+  display: block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
 }
 
 .confirm-text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  display: flex;
+  align-items: center;
+}
 
-  color: var(--primary-text-color);
+.confirm-text span {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--title-text-color);
+  border-radius: 3px;
+
+  margin-right: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.confirm-check:checked + .confirm-text span {
+  background-color: var(--accent-color);
+  border-color: transparent;
+  fill: var(--primary-bg-color);
+  background-size: contain;
+  background-origin: border-box;
+  background-repeat: no-repeat;
 }
 
 .license-agreement {
@@ -971,6 +980,7 @@ img {
 }
 
 /* Кнопка відправки  */
+
 .modal-form-btn {
   width: 200px;
   height: 50px;
