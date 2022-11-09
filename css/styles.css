@@ -187,7 +187,7 @@ img {
 /* Гергой */
 
 .hero {
-  width: 1600px;
+  max-width: 1600px;
   height: 600px;
   background-repeat: no-repeat;
   background-position: center;
@@ -821,7 +821,6 @@ img {
   padding: 40px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 12px;
   align-items: center;
 }
 
@@ -848,6 +847,8 @@ img {
 }
 
 .modal-form-name {
+  display: block;
+
   margin-bottom: 4px;
 
   font-weight: 400;
